@@ -24,4 +24,13 @@ public class ShapeDB {
             s.draw(g);
         }
     }
+    int countClasses(Class<?> T) {
+        int count = 0;
+        for (Object object : shapes) {
+            if (T.isInstance(object)) {
+                count++;
+            }
+        }
+        return count;
+    }
 }

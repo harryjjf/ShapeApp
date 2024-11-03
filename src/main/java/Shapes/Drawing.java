@@ -19,6 +19,16 @@ public class Drawing extends Canvas {
     public void addSquare(int sideLength, Point position, Color colour){
         shapes.addSquare(sideLength, position, colour);
     }
+    public int getNumCircles(){
+        return shapes.countClasses(Circle.class);
+    }
+    public int getNumRectangles(){
+        return shapes.countClasses(Rect.class);
+    }
+    public int getNumSquare(){
+        return shapes.countClasses(Square.class);
+    }
+
 
     public void paint(Graphics g) {
         shapes.drawShapes(g);
